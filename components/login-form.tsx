@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input"
 import { baseUrl } from "@/lib/url"
 import { FormEvent, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { toast } from "react-hot-toast"
 
 export function LoginForm({
   className,
@@ -48,10 +49,12 @@ export function LoginForm({
     const data = await response.json();
     setLoading(false);
     if (!(data.error)) {
+      toast.success('Successfully logged in!')
       localStorage.setItem("token", data.token)
       router.push("/")
     } else {
       setError(data.error || "Login failed.");
+      toast.error('Login failed.');
     }
   }
 

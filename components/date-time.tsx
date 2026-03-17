@@ -70,8 +70,8 @@ export function DatePickerTime() {
     }
 
     return (
-        <FieldGroup className="mx-auto max-w-xs flex-row">
-            <form onSubmit={handleSubmit}>
+        <FieldGroup className="gap-2 max-w-xs">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <Field>
                     <FieldLabel htmlFor="date-picker-optional">Date</FieldLabel>
                     <Popover open={open} onOpenChange={setOpen}>

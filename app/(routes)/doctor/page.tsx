@@ -31,7 +31,7 @@ const page = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-10 mt-5">
+    <div className="flex mt-6">
       <div className="w-full max-w-xl space-y-4">
         <div>
           <h1 className="text-2xl font-semibold">Today&apos;s doctor queue</h1>
